@@ -51,7 +51,6 @@ async def async_setup_entry(
 
     _LOGGER.info(f"async_add_entities with {obs_coordinator.data}")
     new_devices = [
-        SensorDataBase(obs_coordinator, obs_coordinator.data),
         StartDatePlanSensorEntity(obs_coordinator, obs_coordinator.data),
         ExpiryDatePlanSensorEntity(obs_coordinator, obs_coordinator.data),
         DataInitialSensorEntity(obs_coordinator, obs_coordinator.data),
